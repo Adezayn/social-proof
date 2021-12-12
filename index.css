@@ -9,7 +9,7 @@ html{
 body{
     font-family: 'Spartan', sans-serif;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     background-color: hsl(0, 0%, 100%);
     background-image: url(images/bg-pattern-top-desktop.svg),url(images/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat;
@@ -24,6 +24,10 @@ h1{
 h2{
     font-size: 0.6rem;
     color:hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+h3{
+    font-weight: 500;
 }
 h4{
     color:hsl(333, 80%, 67%);
@@ -31,16 +35,17 @@ h4{
     padding-top: 5px;
 }
 main{
-    width:80%;
-    margin:100px auto;
+    width:70%;
+    margin:50px auto;
 }
 section:nth-child(1){
     display:flex;
-    gap:50px;
+    gap:200px;
 }
 .rate{
     width:300px;
     display: flex;
+    gap: 25px;
     background-color: hsl(300, 24%, 96%);
     padding:15px;
     margin-bottom: 10px;
@@ -54,25 +59,19 @@ section:nth-child(1){
     position: relative;
     right: 60px;
 }
-.rating{
-    margin-right: 25px;
-}
 img[alt="star"]{
     width: 10px;
 }
 section:nth-child(2){
     margin-top: 50px;
     display:flex;
+    gap:20px;
     color: hsl(300, 24%, 96%);
 }
 .item{
     padding:30px;
     border-radius: 5px;
     background: hsl(300, 43%, 22%);
-    margin-left: 20px;
-}
-.item:nth-child(1){
-    margin-left: 0;
 }
 .item:nth-child(2){
     position: relative;
@@ -85,11 +84,11 @@ section:nth-child(2){
 .sub-item{
     display: flex;
     align-items: center;
+    gap:25px;
     margin-bottom: 30px;
 }
 .sub-item img{
     width:30px;
-    margin-right: 15px;
     border-radius:50%;
 }
 .attribution{
@@ -101,15 +100,26 @@ section:nth-child(2){
     color: hsl(228, 45%, 44%);
 }
 @media (max-width:750px){
+    body{
+        background-image: url(images/bg-pattern-top-mobile.svg),url(images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0, left bottom;
+    }
+    main{
+        width:80%;
+    }
+    h1{
+        font-size: 2rem;
+    }
     section:nth-child(1){
         flex-direction: column;
-        justify-content: space-between;
+        gap:20px;
+    }
+    .intro{
+        text-align: center;
     }
     section:nth-child(2){
        flex-direction: column;
-    }
-    .item{
-        margin: 10px 0;
     }
     .item:nth-child(2), .item:nth-child(3){
         position: relative;
@@ -119,16 +129,18 @@ section:nth-child(2){
         width:100%;
         align-items: center;
         flex-direction: column;
+        gap: 5px;
     }
     .rate:nth-child(2), .rate:nth-child(1){
         position: relative;
         right: 0;
     }
-    .rating{
-        margin:0;
-    }
     section:nth-child(2){
         margin-top: 20px;
     }
-
+}
+@media (min-width: 1270px){
+    body{
+        background-position: 0 0, 100% 350px;
+    }
 }
