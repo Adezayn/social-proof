@@ -55,21 +55,10 @@ main{
     position: relative;
     right: 3rem;
 }
-.rating-section .rate:nth-child(1){
+.rating-section .rate:first-child{
     position: relative;
     right: 6rem;
 }
-
-/*.rate p{
-    background-image: url(images/icon-star.svg);
-    background-repeat: repeat-x;
-    background-position:-50%;
-}
-
-img[alt="star"]{
-    width: 1rem;
-}*/
-
 .second-section{
     margin-top: 5rem;
     display:flex;
@@ -121,7 +110,7 @@ img[alt="star"]{
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-/*@media (max-width:750px){
+@media (max-width:750px){
     html{
         font-size: 50%;
     }
@@ -130,40 +119,35 @@ img[alt="star"]{
         background-repeat: no-repeat;
         background-position: 0 0, left bottom;
     }
-    main{
-        width:80%;
+    .intro h1{
+        text-align: center;
+        font-size: 2.5rem;
     }
-    h1{
-        font-size: 2rem;
-    }
-    .item p::first-letter{
-        color: #000;;
-    }
-    section:nth-child(1){
+   
+    .first-section{
         flex-direction: column;
         gap:2rem;
     }
-    .intro{
+    .first-section .intro{
         text-align: center;
     }
-    section:nth-child(2){
+    .second-section{
        flex-direction: column;
     }
     .item:nth-child(2), .item:nth-child(3){
         position: relative;
         top:0;
     }
-    .rate{
+    .rating-section .rate{
         width:100%;
         align-items: center;
         flex-direction: column;
-        gap: .5rem;
     }
-    .rate:nth-child(2), .rate:nth-child(1){
+    .rating-section .rate:nth-child(2), .rating-section .rate:first-child{
         position: relative;
         right: 0;
     }
-    section:nth-child(2){
+   .second-section{
         margin-top: 20px;
     }
-}*/
+}
