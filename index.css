@@ -49,10 +49,10 @@ main{
 }
 .rating-section .reviews{
     background-image: url(images/icon-star.svg);
-    background-repeat: repeat-x;
+    background-repeat: space no-repeat;
     background-position: 100%;
-    width:85px;
-    margin: 0 2rem;
+    width:100px;
+    margin: 0 1.5rem;
 }
 .rating-section .rate:nth-child(2){
     position: relative;
