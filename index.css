@@ -11,10 +11,9 @@ body{
     font-weight: 400;
     font-size: 1.5rem;
     background-color: hsl(0, 0%, 100%);
-    background-image: url(images/bg-pattern-top-desktop.svg),url(images/bg-pattern-bottom-desktop.svg);
-    background-repeat: no-repeat;
     color: hsl(303, 10%, 53%) ;
-    /*background-position: 0 0, 20rem 8rem;*/
+    background: url('images/bg-pattern-top-desktop.svg') no-repeat left top fixed,
+     url('images/bg-pattern-bottom-desktop.svg') no-repeat right bottom fixed,#fff;
     background-size: auto, -300px -100px;
     line-height: 1.5;
 }
@@ -36,6 +35,8 @@ main{
 .rating-section .rate{
     width:40rem;
     display: flex;
+    /* I observed that adding align-items here to
+     a container whose child element is empty, makes the empty element disaapear*/
     gap: 1.5rem;
     background-color: hsl(300, 24%, 96%);
     padding:1.5rem;
@@ -106,7 +107,7 @@ main{
     padding-top: .5rem;
 }
 .attribution{
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: fixed;
     bottom: 0;
 }
@@ -118,9 +119,8 @@ main{
         font-size: 50%;
     }
     body{
-        background-image: url(images/bg-pattern-top-mobile.svg),url(images/bg-pattern-bottom-mobile.svg);
-        background-repeat: no-repeat;
-        background-position: 0 0, left bottom;
+        background: url('images/bg-pattern-top-mobile.svg') no-repeat left top fixed, 
+        url('images/bg-pattern-bottom-mobile.svg') no-repeat right bottom fixed,#fff;
     }
     .intro h1{
         text-align: center;
@@ -144,7 +144,13 @@ main{
     .rating-section .rate{
         width:100%;
         align-items: center;
+        /* I observed that adding align-items and making the flex-direction=column here to
+     a container whose child element is empty without giving the element an height or padding,
+      makes the empty element disaapear*/
         flex-direction: column;
+    }
+    .rating-section .rate .reviews{
+        padding: 1rem;
     }
     .rating-section .rate:nth-child(2), .rating-section .rate:first-child{
         position: relative;
